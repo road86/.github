@@ -81,7 +81,7 @@ One-line commit messages are perfect for small changes, but larger changes shoul
 
 Each issue and pull request should be assigned one or multiple labels depending on the content. We actively encourage all contributors to attach labels onto any issues and pull requests they open to categorise tasks and problems, making it visually easier to find and understand which ever task or problem is being handled in each issue and pull request.
 
-Our repositories have 7 label categories which are subdivided into their own labels.
+Our repositories have 4 label categories which are subdivided into their own labels.
 
 **Build Updates** (light grey)
 
@@ -96,7 +96,6 @@ Our repositories have 7 label categories which are subdivided into their own lab
 **Improvement** (blue)
 
 -   [feature](https://github.com/search?q=user%3Aroad86+label%3Afeature+is%3Aopen) – New feature request.
--   [enhancement](https://github.com/search?q=user%3Aroad86+label%3Aenhancement+is%3Aopen) – New feature request.
 -   [documentation](https://github.com/search?q=user%3Aroad86+label%3documentation+is%3Aopen) – Documentation-related request.
 -   [test](https://github.com/search?q=user%3Aroad86+label%3Atest+is%3Aopen) – Anything related to testing or tests.
 
