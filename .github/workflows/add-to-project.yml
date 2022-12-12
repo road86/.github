@@ -2,7 +2,7 @@ name: automatically add to project board
 on:
     workflow_call:
         secrets:
-            GITHUB_TOKEN:
+            TOKEN:
                 required: true
 
 env:
@@ -21,7 +21,7 @@ jobs:
               uses: actions/add-to-project@main
               with:
                   project-url: https://github.com/orgs/road86/projects/3
-                  github-token: ${{ secrets.GITHUB_TOKEN }}
+                  github-token: ${{ secrets.TOKEN }}
                   labeled: env.todo
     pr_opened:
         name: add opened or reopened PR to project as For Review
@@ -32,5 +32,5 @@ jobs:
               uses: actions/add-to-project@main
               with:
                   project-url: https://github.com/orgs/road86/projects/3
-                  github-token: ${{ secrets.GITHUB_TOKEN }}
+                  github-token: ${{ secrets.TOKEN }}
                   labeled: env.for_review
