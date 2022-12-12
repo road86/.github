@@ -18,7 +18,7 @@ body:
       attributes:
           label: To Manually Test
           description: Include a clear and concise description of how you would manually test this.
-          value: Steps to carry out the test manually:\n1.  Go to '...'\n2.  Click on '...'\n3.  Scroll down to '...'\n4.  Check result.
+          value: "Steps to carry out the test manually:\n1.  Go to '...'\n2.  Click on '...'\n3.  Scroll down to '...'\n4.  Check result."
       validations:
           required: true
     - type: textarea
