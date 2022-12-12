@@ -4,7 +4,7 @@ labels: ['documentation']
 body:
     - type: markdown
       attributes:
-          value: '<!-- ⛔ Note: Please search to see if an issue is already open or previously closed for the feature/enhancement you have encountered before opening a new one to prevent duplication. ⛔ -->'
+          value: '⛔ Note: Please search to see if an issue is already open or previously closed for the bug you have encountered before opening a new one to prevent duplication. ⛔'
     - type: textarea
       id: documentation-description
       attributes:
