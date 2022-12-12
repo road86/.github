@@ -1,0 +1,24 @@
+name: Documentation Request
+description: Request new user documentation to be added!
+title: ""
+labels: ["documentation"]
+assignees: ""
+body:
+  - type: markdown
+    attributes:
+      value |
+        <!-- ⛔ Note: Please search to see if an issue is already open or previously closed for the feature/enhancement you have encountered before opening a new one to prevent duplication. ⛔ -->
+  - type: textarea
+    id: documentation-description
+    attributes:
+      label: Description of feature needing documentation
+      description: Please include a clear and concise description of the feature we need to document.
+      value: "What are we documenting?"
+    validations:
+      required: true
+  - type: textarea
+    id: suggested-documentation
+    attributes:
+      label: Suggested Documentation
+      description: Can you provide suggested text, images or videos that we can use to document the feature?
+      placeholder: Anything you can provide helps.

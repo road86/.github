@@ -1,0 +1,17 @@
+name: label PRs and issues appropriately
+on:
+    workflow_call:
+        secrets:
+            GITHUB_TOKEN:
+                required: true
+
+jobs:
+    add_PR_labels:
+        runs-on: ubuntu-latest
+        steps:
+            - name: add labels to PR based on title
+              uses: fuxingloh/multi-labeler@v1
+              with:
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
+                  config-path: .github/labeler.yml
+                  config-repo: road86/.github

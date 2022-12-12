@@ -1,0 +1,38 @@
+name: Bug Report
+description: Create a technical and/or visual bug report to help improve the code and platform!
+title: ""
+labels: ["bug"]
+assignees: ""
+body:
+  - type: markdown
+    attributes:
+      value |
+        <!-- ⛔ Note: Please search to see if an issue is already open or previously closed for the bug you have encountered before opening a new one to prevent duplication. ⛔ -->
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is (technical and/or visual) and how it has affected your view and/or interaction of the platform. Add screenshots if you can.
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: textarea
+    id: to-reproduce
+    attributes:
+      label: To Reproduce
+      description: A clear and concise description of how to recreate the problem. Add screenshots if you can.
+      value: "1.  Go to '...'\n2.  Click on '....'\n3.  Scroll down to '....'\n4.  See error."
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behaviour
+    attributes:
+      label: Expected Behaviour
+      description: A clear and concise description of what you expected to happen.
+      placeholder: A clear and concise description of what you expected to happen.
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Is there any extra information that could help us such us other context, screenshots, further reading links or discussion notes about the new feature or enhancement idea here.
+      placeholder: Anything else we should know?

@@ -1,0 +1,38 @@
+name: Test Request
+description: Request a new test to help prevent future breakages!
+title: ""
+labels: ["test"]
+assignees: ""
+body:
+  - type: markdown
+    attributes:
+      value |
+        <!-- ⛔ Note: Please search to see if an issue is already open or previously closed for the feature/enhancement you have encountered before opening a new one to prevent duplication. ⛔ -->
+  - type: textarea
+    id: test-description
+    attributes:
+      label: Test Description
+      description: Please include a clear and concise description of what we are testing for including at what level the test is (e.g. unit, API, system, visual).
+      value: "What are we testing for?"
+    validations:
+      required: true
+  - type: textarea
+    id: manual-test
+    attributes:
+      label: To Manually Test
+      description: Include a clear and concise description of how you would manually test this.
+      value : Steps to carry out the test manually:\n1.  Go to '...'\n2.  Click on '...'\n3.  Scroll down to '...'\n4.  Check result.
+    validations:
+      required: true
+  - type: textarea
+    id: related-bugs
+    attributes:
+      label: Related Bugs
+      description: List any related bugs/issues.
+      placeholder: e.g. road86/(repository-name)#(issue-number)
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Is there any extra information that could help us such us other context, screenshots, further reading links or discussion notes about the new feature or enhancement idea here.
+      placeholder: Anything else we should know?

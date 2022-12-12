@@ -1,0 +1,36 @@
+name: automatically add to project board
+on:
+    workflow_call:
+        secrets:
+            GITHUB_TOKEN:
+                required: true
+
+env:
+    todo: Todo
+    done: Done
+    in_progress: In Progress
+    for_review: For Review
+
+jobs:
+    issue_opened:
+        name: add newly opened Issue to project as Todo
+        runs-on: ubuntu-latest
+        if: github.event_name == 'issues' && github.event.action == 'opened'
+        steps:
+            - name: mark issue as ${{ env.todo }}
+              uses: actions/add-to-project@main
+              with:
+                  project-url: https://github.com/orgs/road86/projects/3
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
+                  labeled: env.todo
+    pr_opened:
+        name: add opened or reopened PR to project as For Review
+        runs-on: ubuntu-latest
+        if: github.event_name == 'pull_request' && github.event.action == 'opened'
+        steps:
+            - name: mark PR as ${{ env.for_review }}
+              uses: actions/add-to-project@main
+              with:
+                  project-url: https://github.com/orgs/road86/projects/3
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
+                  labeled: env.for_review
