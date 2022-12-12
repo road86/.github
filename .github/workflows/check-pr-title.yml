@@ -2,7 +2,7 @@ name: check PR title and label appropriately
 on:
     workflow_call:
         secrets:
-            GITHUB_TOKEN:
+            TOKEN:
                 required: true
 
 jobs:
@@ -12,4 +12,4 @@ jobs:
             - name: check PR title
               uses: amannn/action-semantic-pull-request@v3.4.2
               env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  GITHUB_TOKEN: ${{ secrets.TOKEN }}
