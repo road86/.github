@@ -1,38 +1,35 @@
 name: Feature Request
 description: Request a new feature or an enhancement to a feature!
-title: ""
-labels: []
-assignees: ""
+labels: ['feature']
 body:
-  - type: markdown
-    attributes:
-      value |
-        <!-- ⛔ Note: Please search to see if an issue is already open or previously closed for the feature/enhancement you have encountered before opening a new one to prevent duplication. ⛔ -->
-  - type: textarea
-    id: problem
-    attributes:
-      label: Problem
-      description: Provide a clear and concise description of what the problem is (e.g. "Our users are now requiring the ability to ...", or "There is currently not a way for me as a user to ..."").
-      value: "What's the current problem?"
-    validations:
-      required: true
-  - type: textarea
-    id: solution
-    attributes:
-      label: Desired Solution
-      description: Include a clear and concise description of what you want to happen (e.g. "This will benefit users because ..."). Include any code or design - if applicable - that could help illustrate the idea.
-      value: "What would you like to see done?"
-    validations:
-      required: true
-  - type: textarea
-    id: alternatives
-    attributes:
-      label: Considered Alternatives
-      description: A clear and concise description of any alternative solutions, ideas, code or design you've considered for this idea and, importantly, why they aren't your desired soluton.
-      placeholder: How else could we solve the problem?
-  - type: textarea
-    id: additional-context
-    attributes:
-      label: Additional Context
-      description: Is there any extra information that could help us such us other context, screenshots, further reading links or discussion notes about the new feature or enhancement idea here.
-      placeholder: Anything else we should know?
+    - type: markdown
+      attributes:
+          value: '<!-- ⛔ Note: Please search to see if an issue is already open or previously closed for the feature/enhancement you have encountered before opening a new one to prevent duplication. ⛔ -->'
+    - type: textarea
+      id: problem
+      attributes:
+          label: Problem
+          description: Provide a clear and concise description of what the problem is (e.g. "Our users are now requiring the ability to ...", or "There is currently not a way for me as a user to ..."").
+          value: "What's the current problem?"
+      validations:
+          required: true
+    - type: textarea
+      id: solution
+      attributes:
+          label: Desired Solution
+          description: Include a clear and concise description of what you want to happen (e.g. "This will benefit users because ..."). Include any code or design - if applicable - that could help illustrate the idea.
+          value: 'What would you like to see done?'
+      validations:
+          required: true
+    - type: textarea
+      id: alternatives
+      attributes:
+          label: Considered Alternatives
+          description: A clear and concise description of any alternative solutions, ideas, code or design you've considered for this idea and, importantly, why they aren't your desired soluton.
+          placeholder: How else could we solve the problem?
+    - type: textarea
+      id: additional-context
+      attributes:
+          label: Additional Context
+          description: Is there any extra information that could help us such us other context, screenshots, further reading links or discussion notes about the new feature or enhancement idea here.
+          placeholder: Anything else we should know?
