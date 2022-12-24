@@ -10,7 +10,7 @@ body:
       attributes:
           label: Bug Description
           description: A clear and concise description of what the bug is (technical and/or visual) and how it has affected your view and/or interaction of the platform. Add screenshots if you can.
-          value: 'A bug happened!'
+          placeholder: 'A bug happened!'
       validations:
           required: true
     - type: textarea
