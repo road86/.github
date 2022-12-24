@@ -23,7 +23,6 @@ jobs:
               with:
                   project-url: ${{ env.project }}
                   github-token: ${{ secrets.TOKEN }}
-                  labeled: env.todo
               id: add-project
             - name: mark PR as ${{ env.for_review }}
               uses: titoportas/update-project-fields@v0.1.0
@@ -43,7 +42,6 @@ jobs:
               with:
                   project-url: ${{ env.project }}
                   github-token: ${{ secrets.TOKEN }}
-                  labeled: env.for_review
               id: add-project
             - name: mark PR as ${{ env.for_review }}
               uses: titoportas/update-project-fields@v0.1.0
