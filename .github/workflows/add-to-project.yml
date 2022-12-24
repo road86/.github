@@ -6,6 +6,7 @@ on:
                 required: true
 
 env:
+    project: https://github.com/orgs/road86/projects/3
     todo: Todo
     done: Done
     in_progress: In Progress
@@ -20,17 +21,35 @@ jobs:
             - name: mark issue as ${{ env.todo }}
               uses: actions/add-to-project@main
               with:
-                  project-url: https://github.com/orgs/road86/projects/3
+                  project-url: ${{ env.project }}
                   github-token: ${{ secrets.TOKEN }}
                   labeled: env.todo
+                  id: add-project
+            - name: mark PR as ${{ env.for_review }}
+              uses: titoportas/update-project-fields@v0.1.0
+              with:
+                project-url: ${{ env.project }}
+                github-token: ${{ secrets.TOKEN }}
+                item-id: ${{ steps.add-project.outputs.itemId }}
+                field-keys: Status
+                field-values: ${{ env.todo }}
     pr_opened:
         name: add opened or reopened PR to project as For Review
         runs-on: ubuntu-latest
         if: github.event_name == 'pull_request' && github.event.action == 'opened'
         steps:
-            - name: mark PR as ${{ env.for_review }}
+            - name: add PR to project board
               uses: actions/add-to-project@main
               with:
-                  project-url: https://github.com/orgs/road86/projects/3
+                  project-url: ${{ env.project }}
                   github-token: ${{ secrets.TOKEN }}
                   labeled: env.for_review
+                  id: add-project
+            - name: mark PR as ${{ env.for_review }}
+              uses: titoportas/update-project-fields@v0.1.0
+              with:
+                project-url: ${{ env.project }}
+                github-token: ${{ secrets.TOKEN }}
+                item-id: ${{ steps.add-project.outputs.itemId }}
+                field-keys: Status
+                field-values: ${{ env.for_review }}
