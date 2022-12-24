@@ -5,8 +5,8 @@ You should also include motivation (why did this change required?) and which iss
 
 Don't forget to reference all other pull requests which are associated to this one below: e.g.
 
-closes #(issue-number)
-relates road86/(repository-name)#(issue-number)
+closes #issue_number
+relates road86/repository_name#issue_number
 
 ## Dependency Changes (delete if not applicable)
 
@@ -32,7 +32,6 @@ Put an `x` in the boxes that apply to this pull request (you can also fill these
 - [ ] I have read the road86 Contribution Guide.
 - [ ] I have checked all commit message styles match the requested structure.
 - [ ] My code follows the style guidelines of this project.
-- [ ] I have commented my code, particularly in hard-to-understand areas.
 - [ ] I have performed a self-review of my own code.
 - [ ] I have assigned at least one reviewer.
 - [ ] New and existing unit tests pass locally with my changes.
