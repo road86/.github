@@ -18,7 +18,7 @@ body:
       attributes:
           label: To Reproduce
           description: A clear and concise description of how to recreate the problem. Add screenshots if you can.
-          value: "1.  Go to '...'\n2.  Click on '....'\n3.  Scroll down to '....'\n4.  See error."
+          value: "1. Go to '...'\n2. Click on '....'\n3. Scroll down to '....'\n4. See error."
       validations:
           required: true
     - type: textarea
