@@ -11,7 +11,7 @@ relates road86/repository_name#issue_number
 ## Dependency Changes (delete if not applicable)
 
 List any dependencies that have been removed/added/changed in this pull request.
-Has the pipfile.lock or package-lock.json been updated?
+Has the pipfile.lock or yarn.lock been updated?
 
 ## Testing (delete if not applicable)
 
