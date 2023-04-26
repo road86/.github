@@ -10,7 +10,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: add labels to PR based on title
-              uses: fuxingloh/multi-labeler@v1
+              uses: fuxingloh/multi-labeler@v2.0.3
               with:
                   github-token: ${{ secrets.TOKEN }}
                   config-path: .github/labeler.yml
