@@ -2,7 +2,7 @@ name: label PRs and issues appropriately
 on:
     workflow_call:
         secrets:
-            TOKEM:
+            TOKEN:
                 required: true
 
 jobs:
