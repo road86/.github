@@ -1,12 +1,13 @@
 name: Set Repo Label List
 
 on:
-    workflow_dispatch:
-    schedule:
-        - cron: '00 00 * * *'
+    workflow_call:
+        secrets:
+            TOKEN:
+                required: true
 
 jobs:
-    labeler:
+    synchronise_labels:
         runs-on: ubuntu-latest
         steps:
             - name: checkout
@@ -17,4 +18,4 @@ jobs:
                   from: https://raw.githubusercontent.com/road86/.github/main/.github/labels.yml
                   skip_delete: true
               env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN  }}
+                  GITHUB_TOKEN: ${{ secrets.TOKEN  }}
