@@ -1,0 +1,39 @@
+name: Data Request
+description: Request data, analysis or reports
+labels: ['data']
+body:
+    - type: markdown
+      attributes:
+          value: '⛔ Note: Please search to see if an issue is already open or previously closed for the data you are requesting before opening a new one as this prevents duplication. ⛔'
+    - type: dropdown
+      id: data-type
+      attributes:
+        label: What format of data are you requesting?
+        options:
+          - Data Spreadsheet
+          - Data Analysis Code
+          - Data Visualisation or Report
+      validations:
+        required: true
+    - type: textarea
+      id: purpose
+      attributes:
+          label: Purpose of Request
+          description: A specific purpose helps us determine the correct data / analysis / report to provide. Please provide a clear and concise description of who the data is for, how it will be used and how frequently it is needed. (e.g. "Our collaborators need the following data once a month in order to report results and decide on actions to take at their funding committee.",).
+          placeholder: "Why is this data needed?"
+      validations:
+          required: true
+    - type: textarea
+      id: details
+      attributes:
+          label: Specific Data Description With Example
+          description: Please provide a details description of the data / analysis / report you require. This include the file format and structure. You should upload an example spreadsheet / code / chart to help us understand what you need.
+          placeholder: 'Please ensure you upload an example file.'
+      validations:
+          required: true
+    - type: textarea
+      id: date
+      attributes:
+          label: Preferred Completion Date
+          description: You should always provide at least two weeks notice for a data request. If there is a deadline for this data request please provide it below. Please note that deadlines will be accodomated to the best of our ability but may not always be possible.
+          placeholder: 'You should always provide at least two weeks notice for a data request.'
